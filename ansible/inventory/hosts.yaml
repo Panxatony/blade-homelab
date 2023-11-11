@@ -1,0 +1,16 @@
+---
+kubernetes:
+  children:
+    master:
+      hosts:
+        blade01-uptime:
+          ansible_user: root
+          ansible_host: 192.168.200.95
+    worker:
+      hosts:
+        blade02-uptime:
+          ansible_user: root
+          ansible_host: 192.168.200.72
+        blade03-uptime:
+          ansible_user: root
+          ansible_host: 192.168.200.92
