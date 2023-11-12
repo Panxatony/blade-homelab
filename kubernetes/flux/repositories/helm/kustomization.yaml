@@ -12,6 +12,7 @@ resources:
   - ./hajimari.yaml
   - ./ingress-nginx.yaml
   - ./jetstack.yaml
+  - ./longhorn.yaml
   - ./k8s-gateway.yaml
   - ./kubernetes-dashboard.yaml
   - ./metrics-server.yaml
