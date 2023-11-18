@@ -53,6 +53,7 @@ spec:
       primary:
         persistence:
           enabled: true
+          accessModes: "ReadWriteOnce"
           storageClass: longhorn
     resources:
       requests:
