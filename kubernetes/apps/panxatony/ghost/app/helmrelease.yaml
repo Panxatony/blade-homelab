@@ -25,7 +25,6 @@ spec:
   uninstall:
     keepHistory: false 
   values:
-    BITNAMI_DEBUG: true
     ghostBlogTitle: "Panxatony Blog"
     ghostHost: "ghost-panxatony.${SECRET_DOMAIN}"
     ingress:
@@ -45,6 +44,22 @@ spec:
     persistence:
       enabled: true
       storageClass: longhorn
+    volumePermissions:
+      enabled: true
+    mysql:
+      enabled: false
+      volumePermissions:
+        enabled:
+      primary:
+        livenessProbe:
+          enabled: false
+        readinessProbe:
+          enabled: false
+        startupProbe:
+          enabled: false
+        persistence:
+          enabled: true
+          storageClass: longhorn
     resources:
       requests:
         cpu: 500m
