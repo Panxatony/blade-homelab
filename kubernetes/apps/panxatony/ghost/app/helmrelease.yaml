@@ -47,19 +47,12 @@ spec:
     volumePermissions:
       enabled: true
     mysql:
-      enabled: true
-      volumePermissions:
-        enabled:
-      primary:
-        livenessProbe:
-          initialDelaySeconds: 240
-        readinessProbe:
-          initialDelaySeconds: 240
-        startupProbe:
-          initialDelaySeconds: 360
-        persistence:
-          enabled: true
-          storageClass: longhorn
+      enabled: false
+      externalDatabase: 
+        host: mysql.panxatony
+        user: root
+        password: u3x2A4p5gt
+        database: my_database
     resources:
       requests:
         cpu: 500m
