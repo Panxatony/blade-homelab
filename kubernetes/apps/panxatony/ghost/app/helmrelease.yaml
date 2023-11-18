@@ -34,7 +34,9 @@ spec:
         external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"
         hajimari.io/enable: "true"
       hostname: "ghost-panxatony.${SECRET_DOMAIN}"
-      tls: true
+      tls:
+        - hosts:
+            -  "ghost-panxatony.${SECRET_DOMAIN}"
     persistence:
       enabled: true
       storageClass: longhorn
