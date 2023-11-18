@@ -49,7 +49,7 @@ spec:
     mysql:
       enabled: false
       externalDatabase: 
-        host: mysql.panxatony
+        host: mysql
         user: root
         password: u3x2A4p5gt
         database: my_database
