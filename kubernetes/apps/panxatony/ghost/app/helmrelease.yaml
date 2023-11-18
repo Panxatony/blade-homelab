@@ -47,7 +47,7 @@ spec:
     volumePermissions:
       enabled: true
     mysql:
-      enabled: false
+      enabled: true
       volumePermissions:
         enabled:
       primary:
