@@ -44,6 +44,8 @@ spec:
     persistence:
       enabled: true
       storageClass: longhorn
+    volumePermissions:
+      enabled: true
     mysql:
       enabled: true
       primary:
