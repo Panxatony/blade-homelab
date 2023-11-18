@@ -1,0 +1,52 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: ghost
+  namespace: panxatony
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: ghost
+      version: 5.74.0
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
+  maxHistory: 2
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false 
+  values:
+    ghostBlogTitle: "Panxatony Blog"
+    ghostHost: "ghost-panxatony.${SECRET_DOMAIN}"
+    ingress:
+      main:
+        enabled: true
+        ingressClassName: external
+        annotations:
+          hajimari.io/enable: "false"
+        hosts:
+          - host: &host "ghost-panxatony.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                pathType: Prefix
+        tls:
+          - hosts:
+              - *host
+    persistence:
+      data:
+        enabled: true
+        storageClass: longhorn
+        type: emptyDir
+    resources:
+      requests:
+        cpu: 500m
+        memory: 1024M
