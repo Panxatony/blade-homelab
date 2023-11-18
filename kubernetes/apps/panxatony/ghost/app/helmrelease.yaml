@@ -59,7 +59,6 @@ spec:
           initialDelaySeconds: 360
         persistence:
           enabled: true
-          accessModes: "ReadWriteOnce"
           storageClass: longhorn
     resources:
       requests:
