@@ -48,11 +48,11 @@ spec:
       enabled: true
     mysql:
       enabled: false
-      externalDatabase: 
-        host: mysql
-        user: root
-        password: u3x2A4p5gt
-        database: my_database
+    externalDatabase: 
+      host: mysql
+      user: root
+      password: u3x2A4p5gt
+      database: my_database
     resources:
       requests:
         cpu: 500m
