@@ -51,6 +51,12 @@ spec:
       volumePermissions:
         enabled:
       primary:
+        livenessProbe:
+          initialDelaySeconds: 240
+        readinessProbe:
+          initialDelaySeconds: 240
+        startupProbe:
+          initialDelaySeconds: 360
         persistence:
           enabled: true
           accessModes: "ReadWriteOnce"
