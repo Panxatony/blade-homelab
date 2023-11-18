@@ -48,6 +48,8 @@ spec:
       enabled: true
     mysql:
       enabled: true
+      volumePermissions:
+        enabled:
       primary:
         persistence:
           enabled: true
