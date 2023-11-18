@@ -42,10 +42,14 @@ spec:
           - hosts:
               - *host
     persistence:
-      data:
-        enabled: true
-        storageClass: longhorn
-        type: emptyDir
+      enabled: true
+      storageClass: longhorn
+    mysql:
+      enabled: true
+      primary:
+        persistence:
+          enabled: true
+          storageClass: longhorn
     resources:
       requests:
         cpu: 500m
