@@ -33,9 +33,7 @@ spec:
       annotations:
         hajimari.io/enable: "true"
       hostname: "ghost-panxatony.${SECRET_DOMAIN}"
-      tls:
-        - hosts:
-            - *host
+      tls: true
     persistence:
       enabled: true
       storageClass: longhorn
