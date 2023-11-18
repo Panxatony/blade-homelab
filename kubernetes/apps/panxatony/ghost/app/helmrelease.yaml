@@ -28,19 +28,18 @@ spec:
     ghostBlogTitle: "Panxatony Blog"
     ghostHost: "ghost-panxatony.${SECRET_DOMAIN}"
     ingress:
-      main:
-        enabled: true
-        ingressClassName: external
-        annotations:
-          hajimari.io/enable: "false"
-        hosts:
-          - host: &host "ghost-panxatony.${SECRET_DOMAIN}"
-            paths:
-              - path: /
-                pathType: Prefix
-        tls:
-          - hosts:
-              - *host
+      enabled: true
+      ingressClassName: external
+      annotations:
+        hajimari.io/enable: "true"
+      hosts:
+        - host: &host "ghost-panxatony.${SECRET_DOMAIN}"
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - hosts:
+            - *host
     persistence:
       enabled: true
       storageClass: longhorn
