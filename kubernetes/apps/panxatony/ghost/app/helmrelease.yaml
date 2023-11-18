@@ -45,11 +45,6 @@ spec:
     persistence:
       enabled: true
       storageClass: longhorn
-    volumePermissions:
-      enabled: true
-    extraEnvVars:
-      - name: BITNAMI_DEBUG
-        value: true
     resources:
       requests:
         cpu: 500m
