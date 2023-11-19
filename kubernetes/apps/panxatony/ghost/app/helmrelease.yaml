@@ -57,10 +57,10 @@ spec:
           periodSeconds: 300
           timeoutSeconds: 1
         readinessProbe:
-          enabled: false
-#          initialDelaySeconds: 600
-#          periodSeconds: 300
-#          timeoutSeconds: 1
+          enabled: true
+          initialDelaySeconds: 600
+          periodSeconds: 300
+          timeoutSeconds: 1
 #        livenessProbe:
 #          enabled: false
 #        readinessProbe:
@@ -72,8 +72,8 @@ spec:
           storageClass: longhorn
     resources:
       requests:
-        cpu: 500m
-        memory: 1024M
+        cpu: 2000m
+        memory: 2048M
     startupProbe:
         enabled: false
     livenessProbe:
