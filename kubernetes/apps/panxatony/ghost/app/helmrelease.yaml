@@ -74,3 +74,11 @@ spec:
       requests:
         cpu: 500m
         memory: 1024M
+    startupProbe:
+        enabled: false
+    livenessProbe:
+      enabled: true
+      failureThreshold: 20
+    readinessProbe:
+      enabled: true
+      failureThreshold: 20
