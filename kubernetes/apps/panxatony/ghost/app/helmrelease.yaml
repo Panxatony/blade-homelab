@@ -26,6 +26,7 @@ spec:
     keepHistory: false 
   values:
     ghostBlogTitle: "Panxatony Blog"
+    ghostPassword: nRjWLgGdW1
     ghostHost: "ghost-panxatony.${SECRET_DOMAIN}"
     ingress:
       enabled: true
