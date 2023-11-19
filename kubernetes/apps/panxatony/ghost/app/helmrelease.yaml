@@ -51,10 +51,10 @@ spec:
       volumePermissions:
         enabled:
       primary:
-        livenessProbe:
-          enabled: false
-        readinessProbe:
-          enabled: false
+#        livenessProbe:
+#          enabled: false
+#        readinessProbe:
+#          enabled: false
         startupProbe:
           enabled: false
         persistence:
