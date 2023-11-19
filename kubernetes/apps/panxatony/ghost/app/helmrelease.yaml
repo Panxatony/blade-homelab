@@ -17,7 +17,7 @@ spec:
   maxHistory: 2
   install:
     remediation:
-      retries: 3
+      retries: 6
   upgrade:
     cleanupOnFail: true
     remediation:
@@ -57,10 +57,10 @@ spec:
           periodSeconds: 300
           timeoutSeconds: 1
         readinessProbe:
-          enabled: true
-          initialDelaySeconds: 600
-          periodSeconds: 300
-          timeoutSeconds: 1
+          enabled: false
+#          initialDelaySeconds: 600
+#          periodSeconds: 300
+#          timeoutSeconds: 1
 #        livenessProbe:
 #          enabled: false
 #        readinessProbe:
