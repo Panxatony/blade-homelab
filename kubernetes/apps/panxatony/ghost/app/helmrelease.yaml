@@ -51,20 +51,20 @@ spec:
       volumePermissions:
         enabled:
       primary:
-        livenessProbe:
-          enabled: true
-          initialDelaySeconds: 600
-          periodSeconds: 300
-          timeoutSeconds: 1
-        readinessProbe:
-          enabled: true
-          initialDelaySeconds: 600
-          periodSeconds: 300
-          timeoutSeconds: 1
 #        livenessProbe:
-#          enabled: false
+#          enabled: true
+#          initialDelaySeconds: 600
+#          periodSeconds: 300
+#          timeoutSeconds: 1
 #        readinessProbe:
-#          enabled: false
+#          enabled: true
+#          initialDelaySeconds: 600
+#          periodSeconds: 300
+#          timeoutSeconds: 1
+        livenessProbe:
+          enabled: false
+        readinessProbe:
+          enabled: false
         startupProbe:
           enabled: false
         persistence:
@@ -74,11 +74,11 @@ spec:
       requests:
         cpu: 2000m
         memory: 2048M
-    startupProbe:
-        enabled: false
-    livenessProbe:
-      enabled: true
-      failureThreshold: 20
-    readinessProbe:
-      enabled: true
-      failureThreshold: 20
+#    startupProbe:
+#        enabled: false
+#    livenessProbe:
+#      enabled: true
+#      failureThreshold: 20
+#    readinessProbe:
+#      enabled: true
+#      failureThreshold: 20
