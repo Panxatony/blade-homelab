@@ -51,6 +51,16 @@ spec:
       volumePermissions:
         enabled:
       primary:
+        livenessProbe:
+          enabled: true
+          initialDelaySeconds: 600
+          periodSeconds: 300
+          timeoutSeconds: 1
+        readinessProbe:
+          enabled: true
+          initialDelaySeconds: 600
+          periodSeconds: 300
+          timeoutSeconds: 1
 #        livenessProbe:
 #          enabled: false
 #        readinessProbe:
