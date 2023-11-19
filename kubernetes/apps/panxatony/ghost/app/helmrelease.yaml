@@ -44,6 +44,9 @@ spec:
       enabled: true
     mysql:
       enabled: true
+      auth:
+        password: arUGQdLVyv
+        rootPassword: ktF3nMxNXM
       volumePermissions:
         enabled:
       primary:
