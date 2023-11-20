@@ -62,11 +62,14 @@ spec:
 #          periodSeconds: 300
 #          timeoutSeconds: 1
         livenessProbe:
-          enabled: false
+          initialDelaySeconds: 3600
+#          enabled: false
         readinessProbe:
-          enabled: false
+          initialDelaySeconds: 3600
+#          enabled: false
         startupProbe:
-          enabled: false
+          initialDelaySeconds: 3600
+#          enabled: false
         persistence:
           enabled: true
           storageClass: longhorn
@@ -74,11 +77,14 @@ spec:
       requests:
         cpu: 2000m
         memory: 2048M
-#    startupProbe:
+    startupProbe:
+      initialDelaySeconds: 3600
 #        enabled: false
-#    livenessProbe:
+    livenessProbe:
+      initialDelaySeconds: 3600
 #      enabled: true
 #      failureThreshold: 20
-#    readinessProbe:
+    readinessProbe:
+      initialDelaySeconds: 3600
 #      enabled: true
 #      failureThreshold: 20
