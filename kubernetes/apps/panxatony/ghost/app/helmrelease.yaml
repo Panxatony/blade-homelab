@@ -61,14 +61,9 @@ spec:
 #          initialDelaySeconds: 600
 #          periodSeconds: 300
 #          timeoutSeconds: 1
-        livenessProbe:
-          initialDelaySeconds: 3600
-#          enabled: false
-        readinessProbe:
-          initialDelaySeconds: 3600
-#          enabled: false
         startupProbe:
-          initialDelaySeconds: 3600
+          failureThreshold: 90
+          periodSeconds: 10
 #          enabled: false
         persistence:
           enabled: true
@@ -78,13 +73,16 @@ spec:
         cpu: 2000m
         memory: 2048M
     startupProbe:
-      initialDelaySeconds: 3600
+      failureThreshold: 90
+      periodSeconds: 10
+
+#      initialDelaySeconds: 3600
 #        enabled: false
-    livenessProbe:
-      initialDelaySeconds: 3600
+#    livenessProbe:
+#      initialDelaySeconds: 3600
 #      enabled: true
 #      failureThreshold: 20
-    readinessProbe:
-      initialDelaySeconds: 3600
+#    readinessProbe:
+#      initialDelaySeconds: 3600
 #      enabled: true
 #      failureThreshold: 20
