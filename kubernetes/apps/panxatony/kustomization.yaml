@@ -5,3 +5,4 @@ resources:
   - ./namespace.yaml
   - ./ghost/ks.yaml
   - ./mysql/ks.yaml
+  - ./wordpress/ks.yaml
